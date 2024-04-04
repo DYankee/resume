@@ -1,0 +1,16 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{template "head" .}}
+    <title>ZGeary | Home</title>
+</head>
+<body class="text-khaki-500 bg-eggplant-300 min-h-screen flex flex-col">
+    {{template "header" .}}
+
+    {{template "home" .}}
+
+    {{template "footer" .}}
+</body>
+</html>
+{{end}}
