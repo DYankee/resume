@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"html/template"
 	"io"
 	"net/http"
@@ -16,32 +15,6 @@ type siteInfo struct {
 	SiteImg  string
 }
 
-type SiteState struct {
-	current_view string
-	siteInfo     []siteInfo
-}
-
-var mySites = []siteInfo{
-	{
-		SiteName: "The world of AI art",
-		SiteDesc: "Website I created in my second semester of collage. Uses html and css",
-		SiteLink: "https://woa.gearyhs.com/",
-		SiteImg:  "",
-	},
-	{
-		SiteName: "OCC connect",
-		SiteDesc: "website I created in my third semester of collage. Uses php, mySQL, html, and css.",
-		SiteLink: "https://occ-connect.zgeary.dev",
-		SiteImg:  "",
-	},
-	{
-		SiteName: "Dota 2 Fan Site",
-		SiteDesc: "website I created in my first semester of collage. Uses html and css.",
-		SiteLink: "https://occ-connect.zgeary.dev",
-		SiteImg:  "",
-	},
-}
-
 // templeting stuff
 type Template struct {
 	templates *template.Template
@@ -53,44 +26,38 @@ func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Con
 
 // handlers
 func index(c echo.Context) error {
-
-	cookie, err := c.Cookie("current_page")
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Println(cookie.Name)
-	fmt.Println(cookie.Value)
-
-	state := SiteState{
-		current_view: cookie.Value,
-		siteInfo:     mySites,
-	}
-
-	return c.Render(http.StatusOK, "index", state)
+	return c.Render(http.StatusOK, "index", nil)
 }
 
 func home(c echo.Context) error {
-	cookie := new(http.Cookie)
-	cookie.Name = "current_page"
-	cookie.Path = "/"
-	cookie.Value = "home"
-	c.SetCookie(cookie)
 	return c.Render(http.StatusOK, "home", nil)
 }
 
 func sites(c echo.Context) error {
-	cookie := new(http.Cookie)
-	cookie.Name = "current_page"
-	cookie.Path = "/"
-
-	cookie.Value = "sites"
-	c.SetCookie(cookie)
-
-	return c.Render(http.StatusOK, "sites", mySites)
+	sites := []siteInfo{
+		{
+			SiteName: "The world of AI art",
+			SiteDesc: "Website I created in my second semester of collage. Uses html and css",
+			SiteLink: "https://woa.gearyhs.com/",
+			SiteImg:  "",
+		},
+		{
+			SiteName: "OCC connect",
+			SiteDesc: "website I created in my third semester of collage. Uses php, mySQL, html, and css.",
+			SiteLink: "https://occ-connect.zgeary.dev",
+			SiteImg:  "",
+		},
+		{
+			SiteName: "Dota 2 Fan Site",
+			SiteDesc: "website I created in my first semester of collage. Uses html and css.",
+			SiteLink: "https://occ-connect.zgeary.dev",
+			SiteImg:  "",
+		},
+	}
+	return c.Render(http.StatusOK, "sites", sites)
 }
 
 func main() {
-
 	t := &Template{
 		templates: template.Must(template.ParseGlob("public/views/*.html")),
 	}

@@ -8,14 +8,7 @@
 <body class="min-h-screen flex flex-row">
     {{template "header" .}}
 
-    {{if .Current_view "home"}}
     {{template "home" .}}
-    {{else if .Current_view "sites"}}
-    {{template "sites" .SiteInfo}}
-    {{else}}
-    <p>help</p>
-    {{end}}
-
 </body>
 </html>
 {{end}}
