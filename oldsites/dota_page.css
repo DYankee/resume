@@ -1,0 +1,222 @@
+/* CSS setup */
+:root {
+    --light-text: #D9CAB3;
+    --dark-text: #8C7A6B;
+    --light-background-1: #D9CAB3;
+    --dark-background-1: #8C7A6B;
+    --accent-1: #250408;
+    --accent-2: #5E0B15;
+    --accent-3: #F6E27F;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+table{
+    width: fit-content;
+    border: 5px solid var(--accent-1);
+    border-collapse: collapse;
+}
+
+tr, td, th{
+    border: 2px solid var(--accent-1);
+    border-collapse: collapse;
+    padding: .5rem;
+}
+
+body{
+    background-color: var(--accent-2);
+    min-height: 100%;
+    display: grid;
+    padding-bottom: 10vh;
+}
+
+/* Nav styling */
+header {
+    display: block;
+    background-image: url("/img/dota2_banner.jpg");
+    height: 500px;
+    background-size: auto;
+    background-position: center;
+    position: relative;
+}
+
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-links{
+    display: flex;
+    list-style: none;
+}
+
+.nav-item{
+    background-color: #25040890;
+}
+.nav-item:hover{
+    background-color: var(--accent-2);
+    color: var(--light-text);
+}
+
+.nav-item a{
+    color: var(--light-text);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.active{
+    background-color: var(--accent-2);
+}
+
+.active a{
+    color: var(--light-text);
+}
+
+/* Main content */
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    background-color: var(--accent-2);
+    color: var(--light-text);
+    border-bottom: 3px solid var(--accent-1);
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+
+    padding: 1rem;
+}
+
+#Introduction{
+    text-align: center;
+    background-color: var(--light-background-1);
+    border: 5px solid var(--accent-1);
+}
+
+#Introduction p{
+    font-size: 1.5rem;
+}
+
+p{
+    padding: 1rem;
+}
+
+#Gameplay{
+    background-color: var(--accent-2);
+}
+
+h2{
+    background-color: var(--accent-2);
+    color: var(--light-text);
+    border-inline: 5px solid var(--accent-1);
+
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+#Gameplay div{
+    background-color: var(--light-background-1);
+    
+    border-collapse: collapse;
+    display: grid;
+
+    /* grid-template-columns: repeat(auto-fit, minmax(400px,4fr)); */
+    grid-template-columns: 3fr 2fr;
+}
+
+@media (max-width: 1000px){
+    #Gameplay div{
+        grid-template-columns: 1fr;
+    }
+
+    .navbar-links{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    .nav-item a{
+        justify-content: left;
+    }
+
+
+}
+
+
+#Gameplay article{
+    border: 5px solid var(--accent-1);
+}
+
+h3{
+    text-align: center;
+    background-color: #8C7A6B;
+    padding: .5rem;
+
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--accent-1);
+}
+
+#Gameplay p{
+    font-size: 1.5rem;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    align-self: center;
+    border: 5px solid var(--accent-1);
+}
+
+#Favorite-Hero{
+    background-color: var(--light-background-1);
+    border: 5px solid var(--accent-1);
+    border-collapse: collapse;
+    display: grid;
+
+    /* grid-template-columns: repeat(auto-fit, minmax(400px,4fr)); */
+    grid-template-columns: 2fr 2fr;
+}
+
+#Favorite-Hero p{
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer{
+    color: var(--light-text);
+    background-color: var(--accent-2);
+
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p{
+    padding: 0;
+}
+
+footer a{
+    color: var(--light-text);
+    text-decoration: wavy;
+}
+

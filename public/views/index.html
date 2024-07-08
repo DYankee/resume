@@ -5,12 +5,17 @@
     {{template "head" .}}
     <title>ZGeary | Home</title>
 </head>
-<body class="text-khaki-500 bg-eggplant-300 min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-row">
     {{template "header" .}}
 
+    {{if .Current_view "home"}}
     {{template "home" .}}
+    {{else if .Current_view "sites"}}
+    {{template "sites" .SiteInfo}}
+    {{else}}
+    <p>help</p>
+    {{end}}
 
-    {{template "footer" .}}
 </body>
 </html>
 {{end}}

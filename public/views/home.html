@@ -1,11 +1,28 @@
 {{define "home"}}
-<div id="content" class="flex-grow">
-    <div id="dev-info" class="grid grid-cols-3 gap-2 p-10">
-        <div class="ring-4 ring-black_olive-200">
-            <h1 class="bg-black_olive-400 ring-2 ring-black_olive-200 text-2xl text-center p-2" >Welcome to my Web Site</h1>
-            <p>This is the home page for Zachary Geary</p>
+<div id="content" class="flex-grow bg-dark text-text">
+    <div id="body" class="text-xl p-8">
+        <div id="dev-info" class="grid grid-cols-5 gap-10 p-6">
+            <div class="p-10 col-span-3 justify-center">
+                <h1 class="text-8xl text-center p-4" >Zachary Geary</h1>
+                <p class="p-4 text-4xl text-center">Junior IT professinal and Developer looking for someplace to learn, grow and inovate.</p>
+                
+                <h2 class="text-2xl text-center">About Me</h2>
+                <p>
+                    Highly motivated college student looking to gain experience in the professional world. I'm proficient with both Windows
+                    and Linux operating systems. I have a strong understanding of Microsoft office as well most Linux utilities.
+                <br>
+                    I enjoy learning about new technologies and programming through practical application. I currently run and maintain a
+                    home server that hosts my personal website along with cloud storage and gaming servers. I also enjoy playing guitar and
+                    writing music when I have spare time.</p>
+            </div>
+            <div class="col-span-2 border-solid border-2 border-accent-1">
+                <img src="/res/vert.jpg" alt="test">
+                <ul class="flex justify-center p-4">
+                    <li><a href="https://www.linkedin.com/in/zacharygeary"><img src="res/social-linkedin.svg" alt="linkedin icon"></a></li>
+                    <li><a href="https://www.linkedin.com/in/zacharygeary"><img src="res/github-mark.svg" alt="linkedin icon"></a></li>
+                </ul>
+            </div>
         </div>
-        <p class="col-span-2 text-center">test</p>
     </div>
 </div>
 {{end}}

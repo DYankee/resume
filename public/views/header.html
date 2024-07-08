@@ -1,18 +1,17 @@
 {{define "header"}}
-<header class="text-khaki-100 p-8 flex justify-center inset-x-0 top-0 ">
-    <div id="links class ">
-        <ul class=" bg-black_olive-400 flex justify-center gap-1 ring-4 ring-black_olive-200 active:bg-white">
-            <li id="home-link" class="text-2xl p-2 hover:text-khaki-300"
+<header class="flex-shrink bg-light text-dark border-r-accent-1 border-r-2">
+    <div id="links">
+        <ul class="flex flex-col gap-1">
+            <li id="home-link" class="text-2xl p-2 hover:bg-accent-1"
                 hx-get="/views/home" hx-trigger="click" hx-target="#content">
                 Home
             </li>
-            <li id="resume-link" class="text-2xl p-2 hover:text-khaki-300"
-                hx-get="/views/resume" hx-trigger="click" hx-target="#content">
-                Resume
-            </li>
-            <li id="sites-link" class="text-2xl p-2 hover:text-khaki-300"
+            <li id="sites-link" class="text-2xl p-2 hover:bg-accent-1"
                 hx-get="/views/sites" hx-trigger="click" hx-target="#content">
                 Sites
+            </li>
+            <li id="resume-link" class="text-2xl p-2 hover:bg-accent-1">
+                <a href="/res/zachary-geary_resume.pdf">Resume</a>
             </li>
         </ul>
     </div>

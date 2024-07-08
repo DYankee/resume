@@ -1,5 +1,13 @@
 {{define "sites"}}
-<div id="content">
-    this is my home page.
+<div id="content" class="text-center p-8 flex flex-col gap-10">
+    <article>
+        <h1 class="text-3xl p-6">My WebSites and Projects</h1>
+        <hr class="w-2/5 mx-auto border-2">
+    </article>
+    <br>
+    <br>
+    {{range .}}
+        {{template "siteblock" .}}
+    {{end}}
 </div>
 {{end}}
