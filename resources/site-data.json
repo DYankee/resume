@@ -1,0 +1,38 @@
+[
+    {
+        "SiteName": "OCC connect",
+        "SiteLink": "https://occ-connect.zgeary.dev",
+        "SiteImg":  "/resources/img/occ-connect.png",
+        "SiteDesc": "website I created in my third semester of college.",
+        "SiteTime": "Second semester of collage.",
+        "SiteTech": [
+            "APACHE",
+            "PHP",
+            "MYSQL",
+            "HTML",
+            "CSS"
+        ]
+    },
+    {
+        "SiteName": "The world of AI art",
+        "SiteLink": "https://woa.zgeary.dev/",
+        "SiteImg":  "/resources/img/world-of-ai-art.png",
+        "SiteDesc": "Website I created in my second semester of collage.",
+        "SiteTime": "Second semester of collage.",
+        "SiteTech": [
+            "HTML",
+            "CSS"
+        ]
+    },
+    {
+        "SiteName": "Dota 2 Fan Site",
+        "SiteLink": "https://dota.zgeary.dev",
+        "SiteImg":  "/resources/img/dota-site.png",
+        "SiteDesc": "website I created in my first semester of collage. Uses html and css.",
+        "SiteTime": "Second semester of collage.",
+        "SiteTech": [
+            "HTML",
+            "CSS"
+        ]
+    }
+]
