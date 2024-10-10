@@ -1,21 +1,25 @@
 package main
 
 import (
+	"encoding/json"
 	"html/template"
 	"io"
 	"net/http"
+	"os"
 
 	"github.com/labstack/echo/v4"
 )
 
 type siteInfo struct {
 	SiteName string
-	SiteDesc string
 	SiteLink string
 	SiteImg  string
+	SiteDesc string
+	SiteTime string
+	SiteTech []string
 }
 
-// templeting stuff
+// templating stuff
 type Template struct {
 	templates *template.Template
 }
@@ -34,25 +38,14 @@ func home(c echo.Context) error {
 }
 
 func sites(c echo.Context) error {
-	sites := []siteInfo{
-		{
-			SiteName: "The world of AI art",
-			SiteDesc: "Website I created in my second semester of collage. Uses html and css",
-			SiteLink: "https://woa.gearyhs.com/",
-			SiteImg:  "",
-		},
-		{
-			SiteName: "OCC connect",
-			SiteDesc: "website I created in my third semester of collage. Uses php, mySQL, html, and css.",
-			SiteLink: "https://occ-connect.zgeary.dev",
-			SiteImg:  "",
-		},
-		{
-			SiteName: "Dota 2 Fan Site",
-			SiteDesc: "website I created in my first semester of collage. Uses html and css.",
-			SiteLink: "https://occ-connect.zgeary.dev",
-			SiteImg:  "",
-		},
+	var sites = []siteInfo{}
+	file, err := os.ReadFile("resources/site-data.json")
+	if err != nil {
+		c.Logger().Panic()
+	}
+	err = json.Unmarshal(file, &sites)
+	if err != nil {
+		c.Logger().Panic()
 	}
 	return c.Render(http.StatusOK, "sites", sites)
 }
@@ -67,7 +60,7 @@ func main() {
 
 	//css files
 	e.Static("/dist", "dist")
-	e.Static("/res", "res")
+	e.Static("/resources", "resources")
 	e.Static("./oldsites", "dota")
 
 	//init handlers
