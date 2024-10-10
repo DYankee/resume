@@ -1,16 +1,16 @@
 {{define "header"}}
-<header class="flex-shrink bg-light text-dark border-r-accent-1 border-r-2">
+<header class="flex-shrink bg-light text-dark border-r-accent-1 border-r-2 border-t-2 overscroll-none">
     <div id="links">
         <ul class="flex flex-col gap-1">
-            <li id="home-link" class="text-2xl p-2 hover:bg-accent-1"
+            <li id="home-link" class="text-4xl p-2 hover:bg-accent-1"
                 hx-get="/views/home" hx-trigger="click" hx-target="#content">
                 Home
             </li>
-            <li id="sites-link" class="text-2xl p-2 hover:bg-accent-1"
+            <li id="sites-link" class="text-4xl p-2 hover:bg-accent-1"
                 hx-get="/views/sites" hx-trigger="click" hx-target="#content">
                 Sites
             </li>
-            <li id="resume-link" class="text-2xl p-2 hover:bg-accent-1">
+            <li id="resume-link" class="text-4xl p-2 hover:bg-accent-1">
                 <a href="/res/zachary-geary_resume.pdf">Resume</a>
             </li>
         </ul>
