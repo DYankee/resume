@@ -1,13 +1,25 @@
 {{define "siteblock"}}
-<div class="grid grid-cols-5 bg-light border-solid border-2 border-r-accent-1">
-    <a class="col-span-2" href="https://cs.sunyocc.edu/~z.geary/cis130/index.html" >
-        <img src="res/world-of-ai-art.png" alt="test" class="">
-    </a>
-    <a class="col-span-3" href="https://cs.sunyocc.edu/~z.geary/cis130/index.html">
-        <div class="flex flex-col ">
-            <h2 class="bg-dark text-xl p-6">{{.SiteName}}</h2>
-            <p  class="p-4 text-dark text-lg">{{.SiteDesc}}</p>
-        </div>
-    </a>
+<div class="grid grid-cols-8 bg-accent-1 border-solid border-2">
+    <div class="col-span-3">
+        <a class="col-span-2" href={{.SiteLink}}>
+            <img src={{.SiteImg}} alt="test" class="">
+        </a>
+    </div>
+    <div class="col-span-4">
+        <a class="" href={{.SiteLink}}>
+            <div class="flex flex-col">
+                <h2 class="bg-dark text-xl p-6">{{.SiteName}}</h2>
+                <p  class="p-4 text-dark text-2xl">{{.SiteDesc}}</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-span-1 border-solid border-l-2">
+        <h2 class="bg-dark text-xl p-6">Technologies Used</h2>
+        <ul class="text-dark">
+            {{range .SiteTech}}
+                <li>{{.}}</li>
+            {{end}}
+        </ul>
+    </div>
 </div>
 {{end}}
