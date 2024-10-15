@@ -1,14 +1,26 @@
 [
     {
+        "SiteName": "RipR",
+        "SiteLink": "https://github.com/DYankee/RipR",
+        "SiteImg":  "/resources/img/RipR.jpg",
+        "SiteDesc": "TUI tool I made for audacity to export vinyl album recordings song by song. This software uses audacity and the MusicBrainz API to get album info, Calculate the length of each song based on the difference between the official release and personal recording, and then exports each song.",
+        "SiteTech": [
+            "Golang",
+            "MusicBrainz API",
+            "Audacity",
+            "Bubble tea"
+        ]
+    },
+    {
         "SiteName": "OCC connect",
         "SiteLink": "https://occ-connect.zgeary.dev",
         "SiteImg":  "/resources/img/occ-connect.png",
-        "SiteDesc": "website I created in my third semester of college.",
+        "SiteDesc": "Basic forum I built in my third semester at OCC. Users can create threads and reply to them with comments",
         "SiteTime": "Second semester of collage.",
         "SiteTech": [
-            "APACHE",
+            "Apache",
             "PHP",
-            "MYSQL",
+            "MySQL",
             "HTML",
             "CSS"
         ]
@@ -17,7 +29,7 @@
         "SiteName": "The world of AI art",
         "SiteLink": "https://woa.zgeary.dev/",
         "SiteImg":  "/resources/img/world-of-ai-art.png",
-        "SiteDesc": "Website I created in my second semester of collage.",
+        "SiteDesc": "Website I built in my second semester at OCC.",
         "SiteTime": "Second semester of collage.",
         "SiteTech": [
             "HTML",
@@ -28,7 +40,7 @@
         "SiteName": "Dota 2 Fan Site",
         "SiteLink": "https://dota.zgeary.dev",
         "SiteImg":  "/resources/img/dota-site.png",
-        "SiteDesc": "website I created in my first semester of collage. Uses html and css.",
+        "SiteDesc": "website I built in my first semester at OCC.",
         "SiteTime": "Second semester of collage.",
         "SiteTech": [
             "HTML",
