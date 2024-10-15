@@ -1,23 +1,23 @@
 {{define "siteblock"}}
-<div class="grid grid-cols-8 bg-accent-1 border-solid border-2">
+<div class="grid grid-cols-10 bg-accent-1 border-solid border-2">
     <div class="col-span-3">
         <a class="col-span-2" href={{.SiteLink}}>
             <img src={{.SiteImg}} alt="test" class="">
         </a>
     </div>
-    <div class="col-span-4">
-        <a class="" href={{.SiteLink}}>
+    <div class="col-span-5 border-solid border-l-2 border-r-2">
             <div class="flex flex-col">
-                <h2 class="bg-dark text-xl p-6">{{.SiteName}}</h2>
-                <p  class="p-4 text-dark text-2xl">{{.SiteDesc}}</p>
+                <a class="" href={{.SiteLink}}>
+                    <h2 class="bg-dark text-2xl p-4 font-semibold underline">{{.SiteName}}</h2>
+                </a>
+                <p  class="p-2 text-dark text-2xl text-left">{{.SiteDesc}}</p>
             </div>
-        </a>
     </div>
-    <div class="col-span-1 border-solid border-l-2">
-        <h2 class="bg-dark text-xl p-6">Technologies Used</h2>
+    <div class="col-span-2">
+        <h2 class="bg-dark text-2xl p-4 font-semibold">Technologies Used</h2>
         <ul class="text-dark">
             {{range .SiteTech}}
-                <li>{{.}}</li>
+                <li class="text-xl">{{.}}</li>
             {{end}}
         </ul>
     </div>
