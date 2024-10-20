@@ -1,0 +1,8 @@
+services:
+  server:
+    build:
+      context: ./
+    ports: 
+      - 8083:8080
+    container_name: resume-site
+    restart: unless-stopped
