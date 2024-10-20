@@ -1,6 +1,6 @@
 {{define "header"}}
 <header class="flex-shrink bg-light text-dark border-r-accent-1 border-r-2 border-t-2 overscroll-none">
-    <div id="links">
+    <div id="links" class="sticky top-0">
         <ul class="flex flex-col gap-1">
             <li id="home-link" class="text-4xl p-2 hover:bg-accent-1"
                 hx-get="/views/home" hx-trigger="click" hx-target="#content">
@@ -11,7 +11,7 @@
                 Sites
             </li>
             <li id="resume-link" class="text-4xl p-2 hover:bg-accent-1">
-                <a href="/res/zachary-geary_resume.pdf">Resume</a>
+                <a href="/resources/z-geary_resume_online.pdf">Resume</a>
             </li>
         </ul>
     </div>

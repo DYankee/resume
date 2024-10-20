@@ -12,6 +12,17 @@
         ]
     },
     {
+        "SiteName": "zgeary.dev",
+        "SiteLink": "https://zgeary.dev",
+        "SiteImg":  "/resources/img/zgeary-dev.png",
+        "SiteDesc": "Personal website I created to share information about myself and display projects I have worked on.",
+        "SiteTech": [
+            "Golang",
+            "HMTX",
+            "TailWind"
+        ]
+    },
+    {
         "SiteName": "OCC connect",
         "SiteLink": "https://occ-connect.zgeary.dev",
         "SiteImg":  "/resources/img/occ-connect.png",
