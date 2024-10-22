@@ -40,7 +40,7 @@
         "SiteName": "The world of AI art",
         "SiteLink": "https://woa.zgeary.dev/",
         "SiteImg":  "/resources/img/world-of-ai-art.png",
-        "SiteDesc": "Website I built in my second semester at OCC.",
+        "SiteDesc": "Website I built in my second semester at OCC about the history of AI generated art.",
         "SiteTime": "Second semester of collage.",
         "SiteTech": [
             "HTML",
@@ -51,7 +51,7 @@
         "SiteName": "Dota 2 Fan Site",
         "SiteLink": "https://dota.zgeary.dev",
         "SiteImg":  "/resources/img/dota-site.png",
-        "SiteDesc": "website I built in my first semester at OCC.",
+        "SiteDesc": "Small website about the video game Dota 2 that I built in my first semester at OCC.",
         "SiteTime": "Second semester of collage.",
         "SiteTech": [
             "HTML",
